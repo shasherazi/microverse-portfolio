@@ -12,6 +12,9 @@ h1 {
 .nav-name {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 
 .white-text {
