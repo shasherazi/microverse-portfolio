@@ -34,9 +34,9 @@ h2 {
 
 .headline-section {
   background-color: #1c1a19;
-  background-image: url(./assets/images/background.png);
+  background-image: url(./assets/images/background.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-position: right bottom;
   height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
