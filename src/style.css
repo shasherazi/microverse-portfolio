@@ -4,10 +4,42 @@ body {
   margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: InaiMathi;
+  src: url(./assets/fonts/inaimathi-bold.ttf);
+  font-weight: 700;
+}
+
 p,
 h1,
-h2 {
+h2,
+h3 {
   margin: 0;
+}
+
+.btn {
+  height: 48px;
+  color: white;
+  background-color: #ff6b00;
+  font-family: 'Inter', sans-serif;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.btn:hover {
+  color: #f55800;
+  border: 1px solid #f55800;
+  background-color: #fff5e1;
+}
+
+.btn:active {
+  background-color: #e05304;
+  color: #f4f1f0;
 }
 
 .nav-name {
@@ -75,4 +107,112 @@ h2 {
   height: 40px;
   text-align: center;
   list-style: none;
+}
+
+.recent-works-section {
+  margin: 120px 24px 0 24px;
+}
+
+.recent-works-heading {
+  font-family: 'Crete Round', sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.recent-works-hr {
+  margin: 24px 24px 80px 24px;
+  color: #212121;
+}
+
+.recent-works-grid {
+  display: grid;
+}
+
+.recent-works-featured-img {
+  width: 100%;
+}
+
+.recent-works-featured-heading {
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  font-size: 32;
+}
+
+.recent-works-featured-description {
+  font-family: 'Inter', sans-serif;
+  line-height: 24px;
+}
+
+.recent-works-featured-tags {
+  display: flex;
+}
+
+.recent-works-featured-tag {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 12px;
+  border: 1px solid #8993a4;
+  margin: 12px 12px 12px 0;
+}
+
+.recent-works-featured-btn {
+  width: 124px;
+  margin-bottom: 24px;
+}
+
+.recent-works-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: clamp(338px, 338px, 1000vh);
+  background: linear-gradient(
+      180.45deg,
+      rgba(38, 38, 38, 0) 0.75%,
+      rgba(38, 38, 38, 0.9) 61.94%
+    ),
+    url('./assets/images/projectImages/projectBackgroundImg.svg');
+  background-size: cover;
+  margin-bottom: 24px;
+}
+
+.recent-works-card:last-child {
+  margin-bottom: 120px;
+}
+
+.recent-works-card > *:not(.recent-works-card-btn) {
+  padding: 0 12px;
+}
+
+.recent-works-card-btn {
+  margin-top: 22px;
+  width: 100%;
+}
+
+.recent-works-card-heading {
+  font-family: 'Crete Round', sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.recent-works-card-description {
+  font-family: 'Inter', sans-serif;
+  line-height: 24px;
+}
+
+.recent-works-card-tags {
+  display: flex;
+  margin-top: 12px;
+  list-style-type: none;
+}
+
+.recent-works-card-tag {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  padding: 10px 12px;
+  background-color: #ffffff3d;
+  margin-right: 12px;
 }
