@@ -111,6 +111,7 @@ h3 {
 
 .recent-works-section {
   margin: 120px 24px 0 24px;
+  display: grid;
 }
 
 .recent-works-heading {
@@ -123,10 +124,6 @@ h3 {
 .recent-works-hr {
   margin: 24px 24px 80px 24px;
   color: #212121;
-}
-
-.recent-works-grid {
-  display: grid;
 }
 
 .recent-works-featured-img {
