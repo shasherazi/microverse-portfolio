@@ -70,7 +70,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: right bottom;
   height: calc(100vh - 48px);
-  display: flex;
+  display: none; /* TODO: remove this */
   flex-direction: column;
   justify-content: center;
   padding: 0 24px;
@@ -111,7 +111,7 @@ h3 {
 
 .recent-works-section {
   margin: 120px 24px 0 24px;
-  display: grid;
+  display: none; /* TODO: remove this */
 }
 
 .recent-works-heading {
@@ -213,6 +213,7 @@ h3 {
   padding: 120px 24px 0 24px;
   background-color: #1c1a19;
   min-height: 100vh;
+  display: none; /* TODO: remove this */
 }
 
 .about-about {
@@ -297,4 +298,52 @@ h3 {
 
 .last-skill {
   padding-bottom: 120px;
+}
+
+.contact-form-section-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #172b4d;
+  margin: 120px 24px 0 24px;
+  text-align: center;
+}
+
+.contact-form-section-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-section-list {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.contact-form-section-list-item {
+  list-style-type: none;
+  margin-top: 24px;
+  text-align: center;
+}
+
+input {
+  border-bottom: 1px solid #dbd8d7 !important;
+}
+
+input,
+textarea {
+  width: 100%;
+  outline: 0;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  padding: 16px;
+}
+
+textarea {
+  background-color: #e5e5e5;
+  min-height: 114px;
+}
+
+.contact-form-section-form-btn {
+  width: 131px;
 }
