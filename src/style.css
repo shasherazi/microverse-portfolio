@@ -192,12 +192,12 @@ h3 {
 }
 
 .recent-works-card-tags {
-  display: flex;
   margin-top: 12px;
   list-style-type: none;
 }
 
 .recent-works-card-tag {
+  float: left;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   font-size: 15px;
