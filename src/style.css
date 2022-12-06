@@ -70,7 +70,7 @@ h3 {
   background-repeat: no-repeat;
   background-position: right bottom;
   height: calc(100vh - 48px);
-  display: none; /* TODO: remove this */
+  display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 0 24px;
@@ -111,7 +111,7 @@ h3 {
 
 .recent-works-section {
   margin: 120px 24px 0 24px;
-  display: none; /* TODO: remove this */
+  display: grid; 
 }
 
 .recent-works-heading {
@@ -213,7 +213,6 @@ h3 {
   padding: 120px 24px 0 24px;
   background-color: #1c1a19;
   min-height: 100vh;
-  display: none; /* TODO: remove this */
 }
 
 .about-about {
@@ -346,4 +345,13 @@ textarea {
 
 .contact-form-section-form-btn {
   width: 131px;
+}
+
+footer .headline-social-icons {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 72px;
 }
