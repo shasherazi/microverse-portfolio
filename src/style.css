@@ -111,7 +111,7 @@ h3 {
 
 .recent-works-section {
   margin: 120px 24px 0 24px;
-  display: grid; 
+  display: grid;
 }
 
 .recent-works-heading {
@@ -347,11 +347,17 @@ textarea {
   width: 131px;
 }
 
-footer .headline-social-icons {
+.footer-list {
+  list-style-type: none;
   display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 72px;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer-hr {
+  margin-top: 124px;
+}
+
+.footer-social-icon {
+  margin: 0 11px;
 }
