@@ -298,3 +298,66 @@ h3 {
 .last-skill {
   padding-bottom: 120px;
 }
+
+.contact-form-section-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #172b4d;
+  margin: 120px 24px 0 24px;
+  text-align: center;
+}
+
+.contact-form-section-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-section-list {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.contact-form-section-list-item {
+  list-style-type: none;
+  margin-top: 24px;
+  text-align: center;
+}
+
+input {
+  border-bottom: 1px solid #dbd8d7 !important;
+}
+
+input,
+textarea {
+  width: 100%;
+  outline: 0;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  padding: 16px;
+}
+
+textarea {
+  background-color: #e5e5e5;
+  min-height: 114px;
+}
+
+.contact-form-section-form-btn {
+  width: 131px;
+}
+
+.footer-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer-hr {
+  margin-top: 124px;
+}
+
+.footer-social-icon {
+  margin: 0 11px;
+}

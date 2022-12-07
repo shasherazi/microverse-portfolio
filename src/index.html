@@ -244,6 +244,84 @@
           </ul>
         </article>
       </section>
+
+      <section class="contact-form-section">
+        <h2 class="contact-form-section-heading">
+          I'm always interested in hearing about new projects, so if you'd like
+          to chat please get in touch.
+        </h2>
+
+        <form
+          action="https://formspree.io/f/xlevqbvb"
+          method="POST"
+          class="contact-form-section-form"
+        >
+          <ul class="contact-form-section-list">
+            <li class="contact-form-section-list-item">
+              <label for="name"></label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Full name"
+                id="name"
+                autocomplete="off"
+                required
+                maxlength="30"
+              />
+            </li>
+
+            <li class="contact-form-section-list-item">
+              <label for="email"> </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email address"
+                required
+                autocomplete="off"
+              />
+            </li>
+
+            <li class="contact-form-section-list-item">
+              <label for="textarea"></label>
+              <textarea
+                name="textarea"
+                id="textarea"
+                cols="30"
+                placeholder="Enter text here"
+                required
+                maxlength="500"
+              ></textarea>
+            </li>
+
+            <li class="contact-form-section-list-item">
+              <button type="submit" class="btn contact-form-section-form-btn">
+                Get in touch
+              </button>
+            </li>
+          </ul>
+        </form>
+      </section>
     </main>
+    <footer>
+      <hr class="footer-hr" />
+      <ul class="footer-list">
+        <li class="footer-social-icon">
+          <img src="./assets/icons/githubBlue.svg" alt="github icon" />
+        </li>
+        <li class="footer-social-icon">
+          <img src="./assets/icons/linkedinBlue.svg" alt="linkedin icon" />
+        </li>
+        <li class="footer-social-icon">
+          <img src="./assets/icons/angelistBlue.svg" alt="angelist icon" />
+        </li>
+        <li class="footer-social-icon">
+          <img src="./assets/icons/twitterBlue.svg" alt="twitter icon" />
+        </li>
+        <li class="footer-social-icon">
+          <img src="./assets/icons/mediumBlue.svg" alt="medium icon" />
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>
