@@ -21,6 +21,10 @@ h3 {
   margin: 0;
 }
 
+.desktop-only {
+  display: none;
+}
+
 .btn {
   height: 48px;
   color: white;
@@ -111,6 +115,9 @@ h3 {
 
 .recent-works-section {
   margin: 120px 24px 0 24px;
+}
+
+.recent-works-grid {
   display: grid;
 }
 
@@ -297,4 +304,245 @@ h3 {
 
 .last-skill {
   padding-bottom: 120px;
+}
+
+.contact-form-section-heading {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  color: #172b4d;
+  margin: 120px 24px 0 24px;
+  text-align: center;
+}
+
+.contact-form-section-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-section-list {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.contact-form-section-list-item {
+  list-style-type: none;
+  margin-top: 24px;
+  text-align: center;
+}
+
+input {
+  border-bottom: 1px solid #dbd8d7 !important;
+}
+
+input,
+textarea {
+  width: 100%;
+  outline: 0;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  padding: 16px;
+}
+
+textarea {
+  background-color: #e5e5e5;
+  min-height: 114px;
+}
+
+.contact-form-section-form-btn {
+  width: 131px;
+}
+
+.footer-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.footer-hr {
+  margin-top: 124px;
+}
+
+.footer-social-icon {
+  margin: 0 11px;
+}
+
+@media (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+
+  .nav-bar {
+    height: 72px;
+    justify-content: space-around;
+  }
+
+  .nav-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .nav-right-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .nav-right-list-link {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+  }
+
+  .nav-right-list-item {
+    padding: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  .headline-section {
+    background-image: url(./assets/images/dekstopBackground.svg);
+    background-size: contain;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 36px;
+  }
+
+  .headline-section-text {
+    max-width: 566px;
+  }
+
+  .headline-primary-text {
+    font-size: 72px;
+  }
+
+  .headline-supporting-text {
+    font-size: 32px;
+  }
+
+  .headline-description {
+    font-size: 20px;
+  }
+
+  .headline-social-icons {
+    flex-direction: column;
+    order: -1;
+    margin-right: 86px;
+  }
+
+  .recent-works-heading {
+    display: inline;
+    font-size: 40px;
+  }
+
+  .recent-works-section {
+    margin: 135px 140px 0 140px;
+  }
+
+  .recent-works-hr {
+    float: right;
+    width: calc(100% - 370px);
+  }
+
+  .recent-works-grid {
+    clear: both;
+  }
+
+  .recent-work-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 36px 24px;
+  }
+
+  .recent-works-card {
+    margin: 0;
+  }
+
+  .recent-works-card:last-child {
+    margin-bottom: 130px;
+  }
+
+  .recent-works-featured {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .recent-works-featured-text {
+    margin-left: 24px;
+  }
+
+  .recent-works-featured-heading {
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+
+  .recent-works-featured-description {
+    font-size: 20px;
+    margin-bottom: 24px;
+  }
+
+  .recent-works-featured-tags {
+    margin-bottom: 24px;
+  }
+
+  .about {
+    padding: 130px 142px 0 142px;
+  }
+
+  .about-about {
+    margin-right: -142px;
+    background-image: url(./assets/images/aboutDesktopBackground.svg);
+    background-position: right top;
+  }
+
+  .about-about > *:not(hr) {
+    max-width: 566px;
+  }
+
+  .about-hr {
+    margin-bottom: 140px;
+    margin-right: 142px;
+  }
+
+  .about-skills-list {
+    justify-content: space-between;
+  }
+
+  .about-skills-list-item {
+    text-align: left;
+  }
+
+  .contact-form-section {
+    margin: 130px;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .contact-form-section-heading {
+    font-size: 40px;
+    text-align: left;
+    margin: 0 40px 0 0;
+    max-width: 420px;
+  }
+
+  .contact-form-section-form {
+    width: 100%;
+  }
+
+  .contact-form-section-list {
+    margin: 0;
+  }
+
+  .contact-form-section-list-item {
+    text-align: left;
+  }
+
+  .footer-hr {
+    margin-top: 154px;
+  }
 }
