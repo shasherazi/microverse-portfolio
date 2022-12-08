@@ -33,6 +33,7 @@ h3 {
   border: none;
   font-weight: 700;
   font-size: 17px;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
@@ -131,6 +132,11 @@ h3 {
 
 .recent-works-featured-img {
   width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.recent-works-featured-img:hover {
+  scale: 1.02;
 }
 
 .recent-works-featured-heading {
@@ -339,11 +345,21 @@ textarea {
   border: none;
   font-family: 'Inter', sans-serif;
   padding: 16px;
+  transition: all 0.2s ease-in;
+}
+
+input:focus {
+  border-color: #f55800 !important;
 }
 
 textarea {
   background-color: #e5e5e5;
   min-height: 114px;
+  border: 1px solid #0000;
+}
+
+textarea:focus {
+  border: 1px solid #f55800;
 }
 
 .contact-form-section-form-btn {
@@ -431,6 +447,19 @@ textarea {
     margin-right: 86px;
   }
 
+  .headline-social-icons > * {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .about-about > *:not(hr) {
+    max-width: 566px;
+  }
+
+  .headline-social-icons > *:hover {
+    padding-left: 20px;
+    scale: 1.2;
+  }
+
   .recent-works-featured-img {
     min-width: 0;
     flex: 60%;
@@ -504,10 +533,6 @@ textarea {
     margin-right: -142px;
     background-image: url(./assets/images/aboutDesktopBackground.svg);
     background-position: right top;
-  }
-
-  .about-about > *:not(hr) {
-    max-width: 566px;
   }
 
   .recent-works-card:hover > *:not(button) {
