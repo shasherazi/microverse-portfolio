@@ -33,6 +33,7 @@ h3 {
   border: none;
   font-weight: 700;
   font-size: 17px;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
