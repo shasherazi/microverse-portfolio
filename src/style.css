@@ -345,11 +345,21 @@ textarea {
   border: none;
   font-family: 'Inter', sans-serif;
   padding: 16px;
+  transition: all 0.2s ease-in;
+}
+
+input:focus {
+  border-color: #f55800 !important;
 }
 
 textarea {
   background-color: #e5e5e5;
   min-height: 114px;
+  border: 1px solid #0000;
+}
+
+textarea:focus {
+  border: 1px solid #f55800;
 }
 
 .contact-form-section-form-btn {
