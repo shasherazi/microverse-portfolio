@@ -132,6 +132,11 @@ h3 {
 
 .recent-works-featured-img {
   width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.recent-works-featured-img:hover {
+  scale: 1.02;
 }
 
 .recent-works-featured-heading {
