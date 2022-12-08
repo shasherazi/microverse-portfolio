@@ -431,6 +431,19 @@ textarea {
     margin-right: 86px;
   }
 
+  .headline-social-icons > * {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .about-about > *:not(hr) {
+    max-width: 566px;
+  }
+
+  .headline-social-icons > *:hover {
+    padding-left: 20px;
+    scale: 1.2;
+  }
+
   .recent-works-featured-img {
     min-width: 0;
     flex: 60%;
@@ -504,10 +517,6 @@ textarea {
     margin-right: -142px;
     background-image: url(./assets/images/aboutDesktopBackground.svg);
     background-position: right top;
-  }
-
-  .about-about > *:not(hr) {
-    max-width: 566px;
   }
 
   .recent-works-card:hover > *:not(button) {
