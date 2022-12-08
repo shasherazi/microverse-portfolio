@@ -117,10 +117,6 @@ h3 {
   margin: 120px 24px 0 24px;
 }
 
-.recent-works-grid {
-  display: grid;
-}
-
 .recent-works-heading {
   font-family: 'Crete Round', sans-serif;
   font-size: 38px;
@@ -435,6 +431,16 @@ textarea {
     margin-right: 86px;
   }
 
+  .recent-works-featured-img {
+    min-width: 0;
+    flex: 60%;
+  }
+
+  .recent-works-featured-text {
+    flex: 40%;
+    margin-left: 24px;
+  }
+
   .recent-works-heading {
     display: inline;
     font-size: 40px;
@@ -455,12 +461,16 @@ textarea {
 
   .recent-work-cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 36px 24px;
   }
 
   .recent-works-card {
     margin: 0;
+  }
+
+  .recent-works-card:hover {
+    background: url('./assets/images/projectImages/projectBackgroundImg.svg');
   }
 
   .recent-works-card:last-child {
@@ -470,10 +480,6 @@ textarea {
   .recent-works-featured {
     display: flex;
     margin-bottom: 24px;
-  }
-
-  .recent-works-featured-text {
-    margin-left: 24px;
   }
 
   .recent-works-featured-heading {
@@ -502,6 +508,10 @@ textarea {
 
   .about-about > *:not(hr) {
     max-width: 566px;
+  }
+
+  .recent-works-card:hover > *:not(button) {
+    opacity: 0;
   }
 
   .about-hr {
@@ -544,5 +554,11 @@ textarea {
 
   .footer-hr {
     margin-top: 154px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recent-work-cards {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
