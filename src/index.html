@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;700&family=Poppins&family=Roboto:wght@700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500;600;700&family=Poppins&family=Roboto:wght@700&display=swap"
       rel="stylesheet"
     />
     <!-- Ended importing google fonts-->
@@ -19,25 +19,45 @@
     <header class="nav-header">
       <nav class="nav-bar white-text">
         <a class="nav-name" href="#">shasherazi</a>
-        <p class="nav-hamburger">
-          <img src="./assets/icons/hamburger.svg" alt="hamburger icon" />
-        </p>
+        <div class="nav-right">
+          <div class="nav-right-hamburger mobile-only">
+            <img src="./assets/icons/hamburger.svg" alt="hamburger icon" />
+          </div>
+          <ul class="nav-right-list desktop-only">
+            <a href="#" class="nav-right-list-link">
+              <li class="nav-right-list-item">Portfolio</li>
+            </a>
+            <a href="#" class="nav-right-list-link">
+              <li class="nav-right-list-item">About</li>
+            </a>
+            <a href="#" class="nav-right-list-link">
+              <li class="nav-right-list-item">Contact</li>
+            </a>
+            <a href="#" class="nav-right-list-link">
+              <li class="nav-right-list-item">
+                <img src="./assets/icons/mailIcon.svg" alt="email icon" />
+              </li>
+            </a>
+          </ul>
+        </div>
       </nav>
     </header>
     <main>
       <section class="headline-section">
-        <h1 class="headline-primary-text">
-          Hey There. <br />
-          I'm shasherazi
-        </h1>
-        <h2 class="headline-supporting-text white-text">
-          I'm a Software Developer
-        </h2>
-        <p class="headline-description white-text">
-          I can help you build a product , feature or website Look through some
-          of my work and experience! If you like what you see and have a project
-          you need coded, don't hestiate to contact me.
-        </p>
+        <article class="headline-section-text">
+          <h1 class="headline-primary-text">
+            Hey There. <br />
+            I'm shasherazi
+          </h1>
+          <h2 class="headline-supporting-text white-text">
+            I'm a Software Developer
+          </h2>
+          <p class="headline-description white-text">
+            I can help you build a product , feature or website Look through
+            some of my work and experience! If you like what you see and have a
+            project you need coded, don't hestiate to contact me.
+          </p>
+        </article>
         <ul class="headline-social-icons white-text">
           <li class="headline-social-icon">
             <img src="./assets/icons/github.svg" alt="github icon" />
@@ -58,8 +78,10 @@
       </section>
 
       <section class="recent-works-section">
-        <h2 class="recent-works-heading">My Recent Works</h2>
-        <hr class="recent-works-hr" />
+        <div class="recent-works-head">
+          <h2 class="recent-works-heading">My Recent Works</h2>
+          <hr class="recent-works-hr" />
+        </div>
         <div class="recent-works-grid">
           <article class="recent-works-featured">
             <img
@@ -67,21 +89,23 @@
               src="./assets/images/projectImages/projectFeaturedImg.svg"
               alt="featured project image"
             />
-            <h3 class="recent-works-featured-heading">Multi-Post Stories</h3>
-            <p class="recent-works-featured-description">
-              A daily selection of privately personalized reads; no accounts or
-              sign-ups required. has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a standard
-              dummy text.
-            </p>
-            <div class="recent-works-featured-tags">
-              <p class="recent-works-featured-tag">css</p>
-              <p class="recent-works-featured-tag">html</p>
-              <p class="recent-works-featured-tag">bootstrap</p>
-              <p class="recent-works-featured-tag">Ruby</p>
-            </div>
 
-            <button class="recent-works-featured-btn btn">See Project</button>
+            <div class="recent-works-featured-text">
+              <h3 class="recent-works-featured-heading">Multi-Post Stories</h3>
+              <p class="recent-works-featured-description">
+                A daily selection of privately personalized reads; no accounts
+                or sign-ups required. has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a
+                standard dummy text.
+              </p>
+              <div class="recent-works-featured-tags">
+                <p class="recent-works-featured-tag">css</p>
+                <p class="recent-works-featured-tag">html</p>
+                <p class="recent-works-featured-tag">bootstrap</p>
+                <p class="recent-works-featured-tag">Ruby</p>
+              </div>
+              <button class="recent-works-featured-btn btn">See Project</button>
+            </div>
           </article>
           <article class="recent-work-cards">
             <article class="recent-works-card">
@@ -244,7 +268,6 @@
           </ul>
         </article>
       </section>
-
       <section class="contact-form-section">
         <h2 class="contact-form-section-heading">
           I'm always interested in hearing about new projects, so if you'd like
