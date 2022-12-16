@@ -13,6 +13,7 @@
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Usage](#usage)
+- [📹 Video walkthrough](#video-walkthrough)
 - [👥 Authors](#authors)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
@@ -74,6 +75,15 @@ Clone this repository to your desired folder:
 To run the project, open the `index.html` in your browser or start a live server.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- Loom walkthrough -->
+
+## 📹 Video walkthrough <a name="video-walkthrough"></a>
+
+Here is the [loom video walkthrough](https://www.loom.com/share/b25c200438364e02ac92a38ab29dcd4c) of the project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
