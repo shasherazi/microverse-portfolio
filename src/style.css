@@ -2,6 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
 }
 
 * {
@@ -61,13 +62,14 @@ h3 {
 
 .mobile-menu-overlay {
   height: 100vh;
-  width: 100vw;
+  width: calc(100vw - 15px);
   left: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
   background-color: #3c3a39;
   padding-top: 18px;
+  transition: left 0.4s ease-in-out;
 }
 
 .mobile-menu-overlay-cross-button {
@@ -88,6 +90,10 @@ h3 {
   color: #6f6c6b;
 }
 
+.mobile-menu-overlay-list-item > a {
+  text-decoration: none;
+}
+
 .mobile-menu-overlay-heading {
   padding: 0 16px;
   color: #fff5e1;
@@ -104,6 +110,10 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
+}
+
+.nav-right-hamburger {
+  cursor: pointer;
 }
 
 .headline-section {
