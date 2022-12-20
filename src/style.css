@@ -215,6 +215,77 @@ h3 {
   margin-bottom: 24px;
 }
 
+.project-popup-window {
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background-color: white;
+  width: 90vw;
+  height: 90vh;
+  padding: 16px;
+  box-shadow: 0 0 69px 12px rgba(0, 0, 0, 0.69);
+  -webkit-box-shadow: 0 0 69px 12px rgba(0, 0, 0, 0.69);
+  -moz-box-shadow: 0 0 69px 12px rgba(0, 0, 0, 0.69);
+}
+
+.project-popup-window-text {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.project-popup-window-cross {
+  padding: 5px;
+}
+
+.project-popup-window-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #172b4d;
+}
+
+.project-popup-window-techologies-list {
+  padding: 0;
+}
+
+.project-popup-window-techologies-list-item {
+  border: 1px solid #8993a4;
+}
+
+.project-popup-window-description {
+  font-family: 'Inter', sans-serif;
+  line-height: 24px;
+  color: #344563;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+.project-popup-window-img {
+  height: 220px;
+  width: 100%;
+  padding: 0 16px;
+  object-fit: cover;
+}
+
+.project-popup-window-link-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-popup-window-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0 16px;
+}
+
+.has-popup {
+  position: relative;
+}
+
 .recent-works-card {
   display: flex;
   flex-direction: column;
@@ -226,7 +297,7 @@ h3 {
   margin-bottom: 24px;
 }
 
-.recent-works-card:nth-last-child(-n+3) {
+.recent-works-card:last-child {
   margin-bottom: 120px;
 }
 
@@ -548,9 +619,10 @@ textarea:focus {
 
   .recent-works-card:hover {
     background: url('./assets/images/projectImages/projectBackgroundImg.svg');
+    background-size: cover;
   }
 
-  .recent-works-card:last-child {
+  .recent-works-card:nth-last-child(-n+3) {
     margin-bottom: 130px;
   }
 

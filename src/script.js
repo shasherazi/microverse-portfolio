@@ -91,16 +91,26 @@ for (let i = 0; i < projects.length; i += 1) {
   const projectPopupWindow = document.createElement('div');
   projectPopupWindow.classList.add('project-popup-window');
 
+  const projectPopupWindowText = document.createElement('div');
+  projectPopupWindowText.classList.add('project-popup-window-text');
+  projectPopupWindow.appendChild(projectPopupWindowText);
+
   const projectPopupWindowHeading = document.createElement('h1');
   projectPopupWindowHeading.classList.add('project-popup-window-heading');
   projectPopupWindowHeading.textContent = project.name;
-  projectPopupWindow.appendChild(projectPopupWindowHeading);
+  projectPopupWindowText.appendChild(projectPopupWindowHeading);
+
+  const projectPopupWindowCross = document.createElement('img');
+  projectPopupWindowCross.classList.add('project-popup-window-cross');
+  projectPopupWindowCross.src = './src/assets/icons/cross.svg';
+  projectPopupWindowCross.alt = 'cross button';
+  projectPopupWindowText.appendChild(projectPopupWindowCross);
 
   const projectPopupWindowTechologiesList = document.createElement('ul');
-  projectPopupWindowTechologiesList.classList.add('project-popup-window-techologies-list');
+  projectPopupWindowTechologiesList.classList.add('project-popup-window-techologies-list', 'recent-works-card-tags');
   project.techologies.forEach((techology) => {
     const techologyItem = document.createElement('li');
-    techologyItem.classList.add('project-popup-window-techologies-list-item');
+    techologyItem.classList.add('project-popup-window-techologies-list-item', 'recent-works-card-tag');
     techologyItem.textContent = techology;
     projectPopupWindowTechologiesList.appendChild(techologyItem);
   });
@@ -119,52 +129,43 @@ for (let i = 0; i < projects.length; i += 1) {
 
   const projectPopupWindowLinkButtons = document.createElement('div');
   projectPopupWindowLinkButtons.classList.add('project-popup-window-link-buttons');
-  projectPopupWindowLinkButtons.appendChild(projectPopupWindow);
+  projectPopupWindow.appendChild(projectPopupWindowLinkButtons);
 
   const projectPopupWindowLiveVersionLinkButton = document.createElement('button');
-  projectPopupWindowLiveVersionLinkButton.classList.add('project-popup-window-live-version-link-button');
-  projectPopupWindowLiveVersionLinkButton.textContent = 'See Live';
-  projectPopupWindowLiveVersionLinkButton.appendChild(projectPopupWindowLinkButtons);
+  projectPopupWindowLiveVersionLinkButton.classList.add('project-popup-window-button', 'btn');
+  projectPopupWindowLiveVersionLinkButton.textContent = 'See Live ';
+  const projectPopupWindowLiveVersionLinkButtonIcon = document.createElement('img');
+  projectPopupWindowLiveVersionLinkButtonIcon.classList.add('project-popup-window-live-version-link-button-icon');
+  projectPopupWindowLiveVersionLinkButtonIcon.src = './src/assets/icons/externalLink.svg';
+  projectPopupWindowLiveVersionLinkButtonIcon.alt = 'external link icon';
+  projectPopupWindowLiveVersionLinkButton.appendChild(projectPopupWindowLiveVersionLinkButtonIcon);
+  projectPopupWindowLinkButtons.appendChild(projectPopupWindowLiveVersionLinkButton);
 
   const projectPopupWindowSourceCodeLinkButton = document.createElement('button');
-  projectPopupWindowSourceCodeLinkButton.classList.add('project-popup-window-source-code-link-button');
-  projectPopupWindowSourceCodeLinkButton.textContent = 'See Source';
-  projectPopupWindowSourceCodeLinkButton.appendChild(projectPopupWindowLinkButtons);
+  projectPopupWindowSourceCodeLinkButton.classList.add('project-popup-window-button', 'btn');
+  projectPopupWindowSourceCodeLinkButton.textContent = 'See Source ';
+  const projectPopupWindowSourceCodeLinkButtonIcon = document.createElement('img');
+  projectPopupWindowSourceCodeLinkButtonIcon.classList.add('project-popup-window-source-code-link-button-icon');
+  projectPopupWindowSourceCodeLinkButtonIcon.src = './src/assets/icons/github.svg';
+  projectPopupWindowSourceCodeLinkButtonIcon.alt = 'github icon';
+  projectPopupWindowSourceCodeLinkButton.appendChild(projectPopupWindowSourceCodeLinkButtonIcon);
+  projectPopupWindowLinkButtons.appendChild(projectPopupWindowSourceCodeLinkButton);
 
   articlesToAddPopupWindow[i].appendChild(projectPopupWindow);
 }
 
-// const featuredPopupWindow = document.createElement('div');
-// featuredPopupWindow.classList.add('featured-popup-window');
-// const featuredPopupWindowHeading = document.createElement('h1');
-// featuredPopupWindowHeading.textContent = 'Multi-Post Stories';
-// featuredPopupWindow.appendChild(featuredPopupWindowHeading);
-// const featuredPopupWindowTechologiesList = document.createElement('ul');
+const popupWindowCrossButtons = document.querySelectorAll('.project-popup-window-cross');
 
-// projects[0].techologies.forEach((techology) => {
-//   const techologyItem = document.createElement('li');
-//   techologyItem.textContent = techology;
-//   featuredPopupWindowTechologiesList.appendChild(techologyItem);
-// });
+popupWindowCrossButtons.forEach((crossButton) => {
+  crossButton.addEventListener('click', () => {
+    crossButton.parentElement.parentElement.style.display = 'none';
+  });
+});
 
-// featuredPopupWindow.appendChild(featuredPopupWindowTechologiesList);
-// const featuredPopupWindowImg = document.createElement('img');
-// featuredPopupWindowImg.src = projects[0].featuredImage;
-// featuredPopupWindowImg.alt = 'multi-post stories featured image';
-// featuredPopupWindow.appendChild(featuredPopupWindowImg);
+const popupButtons = document.querySelectorAll('.popup-btn');
 
-// const featuredPopupWindowDescription = document.createElement('p');
-// featuredPopupWindowDescription.textContent = projects[0].description;
-// featuredPopupWindow.appendChild(featuredPopupWindowDescription);
-
-// const featuredPopupWindowLinks = document.createElement('div');
-// featuredPopupWindowLinks.classList.add('featured-popup-window-links');
-// const featuredPopupWindowLiveVersionLink = document.createElement('button');
-// featuredPopupWindowLiveVersionLink.textContent = 'See Live';
-// featuredPopupWindowLiveVersionLink.classList.add('featured-popup-window-live-version-link');
-// featuredPopupWindowLinks.appendChild(featuredPopupWindowLiveVersionLink);
-// const featuredPopupWindowSourceCodeLink = document.createElement('button');
-// featuredPopupWindowSourceCodeLink.textContent = 'See Source';
-// featuredPopupWindowSourceCodeLink.classList.add('featured-popup-window-source-code-link');
-// featuredPopupWindowLinks.appendChild(featuredPopupWindowSourceCodeLink);
-// featuredPopupWindow.appendChild(featuredPopupWindowLinks);
+popupButtons.forEach((popupButton) => {
+  popupButton.addEventListener('click', () => {
+    popupButton.parentElement.nextElementSibling.style.display = 'block';
+  });
+});
