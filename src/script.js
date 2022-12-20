@@ -167,5 +167,6 @@ const popupButtons = document.querySelectorAll('.popup-btn');
 popupButtons.forEach((popupButton) => {
   popupButton.addEventListener('click', () => {
     popupButton.parentElement.nextElementSibling.style.display = 'block';
+    popupButton.parentElement.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
