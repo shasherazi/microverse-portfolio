@@ -23,3 +23,148 @@ mobileMenuLinks.forEach((mobileMenuLink) => {
     hideMobileMenu();
   });
 });
+
+const projects = [
+  {
+    name: 'Multi-Post Stories',
+    description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent",
+    featuredImage: './src/assets/images/popupWindowFeaturedImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby on Rails'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data',
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    featuredImage: './src/assets/images/projectImages/projectBackgroundImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data',
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    featuredImage: './src/assets/images/projectImages/projectBackgroundImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data',
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    featuredImage: './src/assets/images/projectImages/projectBackgroundImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data',
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    featuredImage: './src/assets/images/projectImages/projectBackgroundImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data',
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    featuredImage: './src/assets/images/projectImages/projectBackgroundImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data',
+    description: "A daily selection of privately personalized reads; no accounts or sign-ups required. has been the industry's standard",
+    featuredImage: './src/assets/images/projectImages/projectBackgroundImg.svg',
+    techologies: ['html', 'bootstrap', 'Ruby'],
+    liveVersionLink: '#',
+    sourceCodeLink: '#',
+  },
+];
+
+const articlesToAddPopupWindow = document.querySelectorAll('.has-popup');
+
+for (let i = 0; i < projects.length; i += 1) {
+  const project = projects[i];
+
+  const projectPopupWindow = document.createElement('div');
+  projectPopupWindow.classList.add('project-popup-window');
+
+  const projectPopupWindowHeading = document.createElement('h1');
+  projectPopupWindowHeading.classList.add('project-popup-window-heading');
+  projectPopupWindowHeading.textContent = project.name;
+  projectPopupWindow.appendChild(projectPopupWindowHeading);
+
+  const projectPopupWindowTechologiesList = document.createElement('ul');
+  projectPopupWindowTechologiesList.classList.add('project-popup-window-techologies-list');
+  project.techologies.forEach((techology) => {
+    const techologyItem = document.createElement('li');
+    techologyItem.classList.add('project-popup-window-techologies-list-item');
+    techologyItem.textContent = techology;
+    projectPopupWindowTechologiesList.appendChild(techologyItem);
+  });
+  projectPopupWindow.appendChild(projectPopupWindowTechologiesList);
+
+  const projectPopupWindowImg = document.createElement('img');
+  projectPopupWindowImg.classList.add('project-popup-window-img');
+  projectPopupWindowImg.src = project.featuredImage;
+  projectPopupWindowImg.alt = 'project image screenshot';
+  projectPopupWindow.appendChild(projectPopupWindowImg);
+
+  const projectPopupWindowDescription = document.createElement('p');
+  projectPopupWindowDescription.classList.add('project-popup-window-description');
+  projectPopupWindowDescription.textContent = project.description;
+  projectPopupWindow.appendChild(projectPopupWindowDescription);
+
+  const projectPopupWindowLinkButtons = document.createElement('div');
+  projectPopupWindowLinkButtons.classList.add('project-popup-window-link-buttons');
+  projectPopupWindowLinkButtons.appendChild(projectPopupWindow);
+
+  const projectPopupWindowLiveVersionLinkButton = document.createElement('button');
+  projectPopupWindowLiveVersionLinkButton.classList.add('project-popup-window-live-version-link-button');
+  projectPopupWindowLiveVersionLinkButton.textContent = 'See Live';
+  projectPopupWindowLiveVersionLinkButton.appendChild(projectPopupWindowLinkButtons);
+
+  const projectPopupWindowSourceCodeLinkButton = document.createElement('button');
+  projectPopupWindowSourceCodeLinkButton.classList.add('project-popup-window-source-code-link-button');
+  projectPopupWindowSourceCodeLinkButton.textContent = 'See Source';
+  projectPopupWindowSourceCodeLinkButton.appendChild(projectPopupWindowLinkButtons);
+
+  articlesToAddPopupWindow[i].appendChild(projectPopupWindow);
+}
+
+// const featuredPopupWindow = document.createElement('div');
+// featuredPopupWindow.classList.add('featured-popup-window');
+// const featuredPopupWindowHeading = document.createElement('h1');
+// featuredPopupWindowHeading.textContent = 'Multi-Post Stories';
+// featuredPopupWindow.appendChild(featuredPopupWindowHeading);
+// const featuredPopupWindowTechologiesList = document.createElement('ul');
+
+// projects[0].techologies.forEach((techology) => {
+//   const techologyItem = document.createElement('li');
+//   techologyItem.textContent = techology;
+//   featuredPopupWindowTechologiesList.appendChild(techologyItem);
+// });
+
+// featuredPopupWindow.appendChild(featuredPopupWindowTechologiesList);
+// const featuredPopupWindowImg = document.createElement('img');
+// featuredPopupWindowImg.src = projects[0].featuredImage;
+// featuredPopupWindowImg.alt = 'multi-post stories featured image';
+// featuredPopupWindow.appendChild(featuredPopupWindowImg);
+
+// const featuredPopupWindowDescription = document.createElement('p');
+// featuredPopupWindowDescription.textContent = projects[0].description;
+// featuredPopupWindow.appendChild(featuredPopupWindowDescription);
+
+// const featuredPopupWindowLinks = document.createElement('div');
+// featuredPopupWindowLinks.classList.add('featured-popup-window-links');
+// const featuredPopupWindowLiveVersionLink = document.createElement('button');
+// featuredPopupWindowLiveVersionLink.textContent = 'See Live';
+// featuredPopupWindowLiveVersionLink.classList.add('featured-popup-window-live-version-link');
+// featuredPopupWindowLinks.appendChild(featuredPopupWindowLiveVersionLink);
+// const featuredPopupWindowSourceCodeLink = document.createElement('button');
+// featuredPopupWindowSourceCodeLink.textContent = 'See Source';
+// featuredPopupWindowSourceCodeLink.classList.add('featured-popup-window-source-code-link');
+// featuredPopupWindowLinks.appendChild(featuredPopupWindowSourceCodeLink);
+// featuredPopupWindow.appendChild(featuredPopupWindowLinks);
