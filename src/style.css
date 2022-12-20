@@ -222,7 +222,7 @@ h3 {
   z-index: 2;
   background-color: white;
   width: 90vw;
-  height: 90vh;
+  min-height: 90vh;
   padding: 16px;
   box-shadow: 0 0 69px 12px rgba(0, 0, 0, 0.69);
   -webkit-box-shadow: 0 0 69px 12px rgba(0, 0, 0, 0.69);
@@ -266,8 +266,10 @@ h3 {
 .project-popup-window-img {
   height: 220px;
   width: 100%;
-  padding: 0 16px;
   object-fit: cover;
+  box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 5px 24px 0 rgba(0, 0, 0, 0.25);
 }
 
 .project-popup-window-link-buttons {
