@@ -116,20 +116,28 @@ for (let i = 0; i < projects.length; i += 1) {
   });
   projectPopupWindow.appendChild(projectPopupWindowTechologiesList);
 
+  const projectPopupWindowImgAndText = document.createElement('div');
+  projectPopupWindowImgAndText.classList.add('project-popup-window-img-and-text');
+  projectPopupWindow.appendChild(projectPopupWindowImgAndText);
+
   const projectPopupWindowImg = document.createElement('img');
   projectPopupWindowImg.classList.add('project-popup-window-img');
   projectPopupWindowImg.src = project.featuredImage;
   projectPopupWindowImg.alt = 'project image screenshot';
-  projectPopupWindow.appendChild(projectPopupWindowImg);
+  projectPopupWindowImgAndText.appendChild(projectPopupWindowImg);
+
+  const projectPopupWindowTextAndButtons = document.createElement('div');
+  projectPopupWindowTextAndButtons.classList.add('project-popup-window-text-and-buttons');
+  projectPopupWindowImgAndText.appendChild(projectPopupWindowTextAndButtons);
 
   const projectPopupWindowDescription = document.createElement('p');
   projectPopupWindowDescription.classList.add('project-popup-window-description');
   projectPopupWindowDescription.textContent = project.description;
-  projectPopupWindow.appendChild(projectPopupWindowDescription);
+  projectPopupWindowTextAndButtons.appendChild(projectPopupWindowDescription);
 
   const projectPopupWindowLinkButtons = document.createElement('div');
   projectPopupWindowLinkButtons.classList.add('project-popup-window-link-buttons');
-  projectPopupWindow.appendChild(projectPopupWindowLinkButtons);
+  projectPopupWindowTextAndButtons.appendChild(projectPopupWindowLinkButtons);
 
   const projectPopupWindowLiveVersionLinkButton = document.createElement('button');
   projectPopupWindowLiveVersionLinkButton.classList.add('project-popup-window-button', 'btn');
@@ -166,7 +174,7 @@ const popupButtons = document.querySelectorAll('.popup-btn');
 
 popupButtons.forEach((popupButton) => {
   popupButton.addEventListener('click', () => {
-    popupButton.parentElement.nextElementSibling.style.display = 'block';
+    popupButton.parentElement.nextElementSibling.style.display = 'flex';
     popupButton.parentElement.nextElementSibling.scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
