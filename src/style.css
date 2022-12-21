@@ -492,6 +492,11 @@ textarea:focus {
   border: 1px solid #f55800;
 }
 
+.contact-form-small {
+  font-family: 'Inter', sans-serif;
+  color: #dc3545;
+}
+
 .contact-form-section-form-btn {
   width: 131px;
 }
