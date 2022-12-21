@@ -2,6 +2,9 @@ const crossButton = document.querySelector('.mobile-menu-overlay-cross-button');
 const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
 const navHamIcon = document.querySelector('.nav-right-hamburger');
 const mobileMenuLinks = document.querySelectorAll('.mobile-menu-overlay-list-item > a');
+const small = document.querySelector('.contact-form-small');
+const email = document.querySelector('#email');
+const form = document.querySelector('.contact-form-section-form');
 
 function hideMobileMenu() {
   requestAnimationFrame(() => {
@@ -22,4 +25,14 @@ mobileMenuLinks.forEach((mobileMenuLink) => {
   mobileMenuLink.addEventListener('click', () => {
     hideMobileMenu();
   });
+});
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (email.value !== email.value.toLowerCase()) {
+    small.innerHTML = 'Please enter email in lowercase';
+  } else {
+    small.innerHTML = '';
+    form.submit();
+  }
 });
