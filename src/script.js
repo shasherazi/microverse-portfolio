@@ -39,7 +39,7 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-const userInput = {};
+let userInput = {};
 
 [name, email, textArea].forEach((input) => {
   input.addEventListener('input', (e) => {
@@ -47,3 +47,11 @@ const userInput = {};
     localStorage.setItem('userInput', JSON.stringify(userInput));
   });
 });
+
+if (localStorage.getItem('userInput')) {
+  userInput = JSON.parse(localStorage.getItem('userInput'));
+  name.value = userInput.name;
+  email.value = userInput.email;
+  textArea.value = userInput.textarea;
+}
+
