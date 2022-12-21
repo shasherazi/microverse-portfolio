@@ -54,4 +54,3 @@ if (localStorage.getItem('userInput')) {
   email.value = userInput.email;
   textArea.value = userInput.textarea;
 }
-
